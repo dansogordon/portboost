@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<string>Arts</string>
+	<string>Bars and Lounges</string>
+	<string>Cafes</string>
+	<string>Comedy</string>
+	<string>Culture/People Watching/Sightseeing</string>
+	<string>Dancing</string>
+	<string>Movies</string>
+	<string>Music</string>
+	<string>Outdoors</string>
+	<string>Pools</string>
+	<string>Restuarants</string>
+	<string>Reading/Book Clubs</string>
+	<string>Shows</string>
+	<string>Shooting/Guns</string>
+	<string>Sports/Exercising</string>
+	<string>Travel/Exploring</string>
+</array>
+</plist>

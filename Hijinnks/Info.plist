@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>en</string>
+	<key>CFBundleDisplayName</key>
+	<string></string>
+	<key>CFBundleExecutable</key>
+	<string>$(EXECUTABLE_NAME)</string>
+	<key>CFBundleIdentifier</key>
+	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>$(PRODUCT_NAME)</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.846</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>fb1641464232828651</string>
+			</array>
+		</dict>
+	</array>
+	<key>CFBundleVersion</key>
+	<string>1</string>
+	<key>FacebookAppID</key>
+	<string>1641464232828651</string>
+	<key>FacebookDisplayName</key>
+	<string>Hijinnks</string>
+	<key>ITSAppUsesNonExemptEncryption</key>
+	<false/>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>fbapi</string>
+		<string>fb-messenger-api</string>
+		<string>fbauth2</string>
+		<string>fbshareextension</string>
+	</array>
+	<key>LSRequiresIPhoneOS</key>
+	<true/>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+		<key>NSExceptionDomains</key>
+		<dict>
+			<key>http://hijinnks.herokuapp.com</key>
+			<dict>
+				<key>NSIncludeSubdomains</key>
+				<string></string>
+				<key>NSTemporaryExceptionAllowsInsecureHTTPLoads</key>
+				<string></string>
+				<key>NSTemporaryExceptionMinimumTLSVersion</key>
+				<string></string>
+			</dict>
+		</dict>
+	</dict>
+	<key>NSCameraUsageDescription</key>
+	<string>We only will use your camera to get your profile photo</string>
+	<key>NSContactsUsageDescription</key>
+	<string>We only will use your contacts to allow you to select contacts to send invites to.</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>We use your location in order to retrieve invitations that are near you and allow you to post using your location.</string>
+	<key>NSLocationUsageDescription</key>
+	<string>We use your location in order to retrieve invitations that are near you and allow you to post using your location.</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Using your location will allow you to get all invitations from your current area</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Hijinnks needs access to the microphone to be able to attach voice notes.</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>We only will use your camera to get your profile photo</string>
+	<key>UILaunchStoryboardName</key>
+	<string>LaunchScreen</string>
+	<key>UIRequiredDeviceCapabilities</key>
+	<array>
+		<string>armv7</string>
+	</array>
+	<key>UISupportedInterfaceOrientations</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+	</array>
+</dict>
+</plist>
