@@ -31,6 +31,13 @@ class ProfileViewController : UIViewController, UITableViewDelegate, UITableView
         self.activitySpinner.snp.makeConstraints { (make) in
             make.center.equalTo(self.view)
         }
+        self.view.isUserInteractionEnabled = false
+    }
+    
+    func stopActivitySpinner () {
+        self.activitySpinner.stopAnimating()
+        self.activitySpinner.removeFromSuperview()
+        self.view.isUserInteractionEnabled = true
     }
     
     init(user: PFUser) {
@@ -236,6 +243,7 @@ class ProfileViewController : UIViewController, UITableViewDelegate, UITableView
     func getAllInvitationsFromUser () {
         
         self.startActivitySpinner()
+        self.view.isUserInteractionEnabled = false
         let query = InvitationParseObject.query()
         query?.whereKey(ParseObjectColumns.FromUser.rawValue, equalTo: self.user)
         query?.findObjectsInBackground(block: { (invitationParseObjects, error) in
@@ -245,8 +253,7 @@ class ProfileViewController : UIViewController, UITableViewDelegate, UITableView
             }
             else {
                 self.displayInvitationsForUser(invitationParseObjects: invitationParseObjects as! [InvitationParseObject]!)
-                self.activitySpinner.stopAnimating()
-                self.activitySpinner.removeFromSuperview()
+                self.stopActivitySpinner()
                 self.tabBarController?.tabBar.isUserInteractionEnabled = true
             }
         })

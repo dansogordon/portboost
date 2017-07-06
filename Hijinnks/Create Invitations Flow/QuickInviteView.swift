@@ -59,7 +59,7 @@ class QuickInviteView : UIView, UITableViewDataSource, UITableViewDelegate {
     
     func setupUI () {        
         self.backgroundColor = .white
-        self.layer.borderColor = Colors.blue.value.cgColor
+        self.layer.borderColor = Colors.CommentButtonBlue.value.cgColor
         self.layer.borderWidth = 2.0
         self.setHeaderElements()
         self.setTimeViewElements()
@@ -85,7 +85,7 @@ class QuickInviteView : UIView, UITableViewDataSource, UITableViewDelegate {
         }
         sendButton.layer.cornerRadius = CGFloat(BUTTON_CORNER_RADIUS)
         sendButton.setTitle("Send", for: .normal)
-        sendButton.backgroundColor = Colors.blue.value
+        sendButton.backgroundColor = Colors.CommentButtonBlue.value
         sendButton.titleLabel?.font = buttonFont
         
         return sendButton
@@ -115,7 +115,7 @@ class QuickInviteView : UIView, UITableViewDataSource, UITableViewDelegate {
         }
         addDetailsButton.layer.cornerRadius = CGFloat(BUTTON_CORNER_RADIUS)
         addDetailsButton.setTitle("Add Details", for: .normal)
-        addDetailsButton.backgroundColor = Colors.blue.value
+        addDetailsButton.backgroundColor = Colors.CommentButtonBlue.value
         addDetailsButton.titleLabel?.font = buttonFont
         return addDetailsButton
     }
@@ -332,7 +332,7 @@ extension QuickInviteView {
     func setAllFriendsButton () -> UIButton {
         let allFriendsButton = UIButton()
         self.addSubview(allFriendsButton)
-        allFriendsButton.backgroundColor = Colors.blue.value
+        allFriendsButton.backgroundColor = Colors.CommentButtonBlue.value
         allFriendsButton.snp.makeConstraints { (make) in
             make.top.equalTo(self.locationView.snp.bottom).offset(20)
             make.centerX.equalTo(self).offset(BUTTON_OFFSET_TO_CENTER)
@@ -347,7 +347,7 @@ extension QuickInviteView {
     
     func setPublicButton () -> UIButton {
         let publicButton = UIButton()
-        publicButton.backgroundColor = Colors.blue.value
+        publicButton.backgroundColor = Colors.CommentButtonBlue.value
         self.addSubview(publicButton)
         publicButton.snp.makeConstraints { (make) in
             make.centerX.equalTo(self).offset(-BUTTON_OFFSET_TO_CENTER)
@@ -474,11 +474,11 @@ class ContactTableViewCell : UITableViewCell {
         self.contentView.addSubview(profileImageView)
         profileImageView.snp.makeConstraints { (make) in
             make.left.equalTo(self.contentView).offset(10)
-            make.width.equalTo(25)
+            make.width.equalTo(40)
             make.height.equalTo(profileImageView.snp.width)
             make.centerY.equalTo(self.contentView)
         }
-        profileImageView.layer.cornerRadius = 12.5
+        profileImageView.layer.cornerRadius = 20
         profileImageView.clipsToBounds = true
         // Check to see if this contact has a profile image
         if self.contact.imageDataAvailable {
@@ -504,11 +504,11 @@ class ContactTableViewCell : UITableViewCell {
                 self.contentView.addSubview(tempProfileImageLabel)
                 tempProfileImageLabel.snp.makeConstraints { (make) in
                     make.left.equalTo(self.contentView).offset(10)
-                    make.width.equalTo(25)
+                    make.width.equalTo(40)
                     make.height.equalTo(tempProfileImageLabel.snp.width)
                     make.centerY.equalTo(self.contentView)
                 }
-                tempProfileImageLabel.layer.cornerRadius = 12.5
+                tempProfileImageLabel.layer.cornerRadius = 20
                 tempProfileImageLabel.clipsToBounds = true
             }
         }
@@ -525,6 +525,7 @@ class ContactTableViewCell : UITableViewCell {
         telephoneNumberLabel.snp.makeConstraints { (make) in
             make.right.equalTo(self.contentView).offset(-10)
             make.centerY.equalTo(self.contentView)
+            make.width.equalTo(180)
         }
         
         if contact.phoneNumbers.count != 0 {

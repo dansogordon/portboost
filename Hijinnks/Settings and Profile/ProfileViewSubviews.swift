@@ -69,7 +69,7 @@ class ProfileDetailsView : UIView {
     }
     
     func setupUI (user: PFUser) {
-        let font = UIFont.systemFont(ofSize: 12)
+        let font = UIFont.systemFont(ofSize: 14)
         self.firstNameTextField = self.setFirstNameTextField(font: font)
         self.lastNameTextField = self.setLastNameTextField(font: font)
         self.dateOfBirthTextField = self.setDateOfBirthTextField(font: font)

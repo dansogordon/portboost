@@ -31,6 +31,7 @@ class CreateInvitationViewController : UIViewController, PassDataBetweenViewCont
     weak var scrollView:UIScrollView!
     weak var weeklyButton:UIButton!
     weak var monthlyButton:UIButton!
+    weak var sendButton:UIButton!
     
     // Arrays that store interests, friends, and contacts
     var selectedInterests:Array<String>!
@@ -91,12 +92,14 @@ class CreateInvitationViewController : UIViewController, PassDataBetweenViewCont
     
     override func viewWillAppear(_ animated: Bool) {
         if self.quickInviteView == nil {
+            self.sendButton.isHidden = false
             self.showQuickInviteView()
             self.quickInviteView.cancelButton.addTarget(self, action: #selector(cancelButtonPressed), for: .touchUpInside)
             self.quickMode = true
         }
         
         if self.quickMode == true {
+            self.sendButton.isHidden = true
             self.quickInviteView.superview?.isHidden = false
             self.quickInviteView.invitedTableView.reloadData()
         }
@@ -506,6 +509,7 @@ class CreateInvitationViewController : UIViewController, PassDataBetweenViewCont
         sendButton.frame = CGRect(x: 0, y: 0, width: 25, height: 25)
         sendButton.addTarget(self, action: #selector(sendInvite), for: .touchUpInside)
         let donebutton = UIBarButtonItem(customView: sendButton)
+        self.sendButton = sendButton
         self.navigationItem.rightBarButtonItem = donebutton
         self.view.backgroundColor = .white
         
@@ -775,6 +779,7 @@ extension CreateInvitationViewController {
         // TODO: Move over to the QuickInviteController
         self.quickInviteView.superview?.isHidden = true
         self.quickMode = false
+        self.sendButton.isHidden = false
     }
     
 }

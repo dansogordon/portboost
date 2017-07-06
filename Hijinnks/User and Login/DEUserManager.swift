@@ -19,7 +19,8 @@ class DEUserManager: NSObject {
     let PARSE_CLASS_USER_CANONICAL_USERNAME = "canonical_username"
     let USER_RANK_STANDARD = "standard"
     var delegate:PassDataBetweenViewControllersProtocol!
-    var friends:[PFUser]!    
+    var friends:[PFUser]!
+    var profileImage:UIImage!
     
     func createUser(withUserName userName: String, password: String, email: String, phoneNumber: String, errorLabel label: UILabel, showViewControllerOnComplete: UIViewController) {
         self.user = PFUser()
@@ -138,7 +139,9 @@ class DEUserManager: NSObject {
             let profileImageData = user.value(forKey: ParseObjectColumns.Profile_Picture.rawValue) as! PFFile
             profileImageData.getDataInBackground(block: { (data, error) in
                 if error == nil {
-                                        
+                    if data != nil {
+                        self.profileImage = UIImage(data: data!)
+                    }
                 }
             })
         }

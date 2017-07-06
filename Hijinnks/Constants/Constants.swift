@@ -141,7 +141,7 @@ extension Colors {
             case .green:
                 return UIColor(red: 26/255, green: 188/255, blue: 156/255, alpha: 0.75)
             case .blue:
-                return UIColor(red: 34/255, green: 63/255, blue: 158/255, alpha: 1.0)
+                return UIColor(red: 72/255, green: 128/255, blue: 217/255, alpha: 1.0)
             case .CommentButtonBlue:
                 return UIColor(red: 72/255, green: 128/255, blue: 217/255, alpha: 1.0)
             case .red:

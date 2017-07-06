@@ -17,7 +17,7 @@ extension CreateInvitationViewController : MFMessageComposeViewControllerDelegat
     func showQuickInviteView () {
         
         self.quickInviteView = QuickInviteView()
-        
+        self.sendButton.isHidden = true
         let outerView = UIView()
         outerView.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.75)
         self.view.addSubview(outerView)
@@ -58,6 +58,7 @@ extension CreateInvitationViewController : MFMessageComposeViewControllerDelegat
      */
     func addDetailsButtonPressed () {        
         self.quickInviteView.superview?.isHidden = true
+        self.sendButton.isHidden = false
         self.quickMode = false
         self.locationTextField.text = self.quickInviteView.locationTextField.text
         self.startingTimeTextField.text = self.quickInviteView.timeTextField.text
